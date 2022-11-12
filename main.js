@@ -62,36 +62,58 @@ function ex4() {
   var contentChan = document.getElementById('txtChan');
   var contentLe = document.getElementById('txtLe');
   var contentChan = document.getElementById('txtChan');
+  // var content = document.getElementById('txtDiv');
 
-  // var sumChan = 0;
+  var sumChan = 0;
   // var sumLe = 0;
   for(var i = 1; i <= 10; i++){
     if(i % 2 === 0){
-      // sumChan += 1;
+      sumChan += 1;
       document.getElementById('txtChan').innerHTML = contentChan;
       document.getElementById('txtChan').classList.add('info');
     }
     // else{
-  //     sumLe += 1;
-  //     document.getElementById('txtLe').innerHTML = contentLe;
-  //     document.getElementById('txtLe').classList.add('bai2');     
-  //   }
+    //   sumLe += 1;
+    //   document.getElementById('txtLe').innerHTML = contentLe;
+    //   document.getElementById('txtLe').classList.add('bai2');     
+    // }
   }
 
 }
 ex4();
 
 // ------------bai5--------------
-function ex5() {
-  var n = document.getElementById('txtSoNT');
-  for(var i = 1; i < n; i++) {
-    if(i < 2){
-      continue;
-    }else if(i % 2 === 0 && i % i === 0){
+document.getElementById('btnKiemTraSo').onclick = function(){
+  var number = document.getElementById('nhapSo_5').value*1;
 
+  var KetQua = '';
+
+  var soHang = 1;
+  var dem = 0;
+
+  while (soHang <= number) {
+    if(number % soHang === 0){
+      dem ++;
     }
+    soHang++;
+  }
+  if(dem === 2){
+    ketQua1 = number + 'là số nguyên tố';
+  }else{
+    ketQua1 = number + 'không phải là số nguyên tố';
   }
 }
+document.getElementById('ketQua5').innerHTML = ketQua1;
+// function ex5() {
+//   var n = document.getElementById('txtSoNT');
+//   for(var i = 1; i < n; i++) {
+//     if(i < 2){
+//       continue;
+//     }else if(i % 2 === 0 && i % i === 0){
+
+//     }
+//   }
+// }
   
 
 
